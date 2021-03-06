@@ -5,6 +5,11 @@ terraform {
       version = "3.22.0"
     }
   }
+  backend "s3" {
+    bucket = "4dd22323-6f5e-3b7e-ef71-1b35195286f6-backend"
+    key    = "terraform/webapp/terraform.tfstate"
+    region = "eu-west-1"
+ }
   required_version = "~> 0.14"
 }
 
